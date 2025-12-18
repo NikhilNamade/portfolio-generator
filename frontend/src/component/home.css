@@ -1,0 +1,234 @@
+/* Home Component - Form Styles */
+.home-container {
+  all: initial;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #344955;
+  color: white;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 2rem 0;
+}
+
+.home-container *,
+.home-container *::before,
+.home-container *::after {
+  box-sizing: border-box;
+}
+
+.home-container .formContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.home-container .fs-1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.home-container form {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 1000px;
+}
+
+.home-container .formbox {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-container .mb-3 {
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.home-container .form-label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 500;
+}
+
+.home-container input,
+.home-container textarea,
+.home-container select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: white;
+  color: #333;
+}
+
+.home-container input:focus,
+.home-container textarea:focus,
+.home-container select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.home-container input:disabled,
+.home-container select:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.home-container .submitbtn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.home-container .submitbtn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.home-container .submitbtn:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Skills Section */
+.home-container #skillsInput {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.home-container .fa-plus {
+  color: #007bff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.home-container .fa-plus:hover {
+  color: #0056b3;
+}
+
+/* Projects Section */
+.home-container #projectInput {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.home-container #projectInput input {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* File inputs */
+.home-container input[type="file"] {
+  padding: 0.5rem;
+  border: 2px dashed #e9ecef;
+  background: #f8f9fa;
+}
+
+.home-container input[type="file"]:hover {
+  border-color: #007bff;
+  background: #e7f3ff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home-container form {
+    width: 95%;
+    padding: 2.5rem;
+  }
+
+  .home-container .formbox {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .home-container .mb-3 {
+    width: 100%;
+  }
+
+  .home-container input,
+  .home-container select {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container .formContainer {
+    padding: 0 0.5rem;
+  }
+
+  .home-container form {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .home-container .fs-1 {
+    font-size: 2rem;
+  }
+
+  .home-container #skillsInput,
+  .home-container #projectInput {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-container #projectInput input {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container form {
+    padding: 1.5rem;
+  }
+
+  .home-container .fs-1 {
+    font-size: 1.75rem;
+  }
+
+  .home-container input,
+  .home-container select,
+  .home-container .submitbtn {
+    font-size: 0.9rem;
+    padding: 0.625rem;
+  }
+}
