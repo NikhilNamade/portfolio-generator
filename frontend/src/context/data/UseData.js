@@ -8,7 +8,7 @@ const UseData = (props) => { // Accept props here
   const [showNavbar, setShowNavbar] = useState(true);
   const fetchId = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/data/fetchid`, {
+      const response = await fetch(`https://portfolio-generator-u166.onrender.com/api/data/fetchid`, {
         method: "GET",
         headers: {
           "auth-token": localStorage.getItem("token"),
@@ -24,7 +24,7 @@ const UseData = (props) => { // Accept props here
 
 const fetchdata  = async (userId) =>{
   try {
-    const response = await fetch(`http://localhost:5000/api/data/fetch/${userId}`,{
+    const response = await fetch(`https://portfolio-generator-u166.onrender.com/api/data/fetch/${userId}`,{
       method: "GET",
     });
     const data = await response.json()
